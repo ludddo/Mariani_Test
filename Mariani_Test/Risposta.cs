@@ -35,20 +35,9 @@ namespace Mariani_Test
             Punti = punti;
         }
 
-        public Risposta(Risposta oldRisposta)
-        {
-            Testo = oldRisposta.Testo;
-            Punti = oldRisposta.Punti;
-        }
-
         public override bool Equals(object obj)
         {
-            if (!(obj is Risposta) || obj == null)
-                return false;
-
-            Risposta other = (Risposta)obj;
-
-            return Testo == other.Testo && Punti == other.Punti;
+            return false;
         }
 
         public void Aggiunta(IComponent comp)

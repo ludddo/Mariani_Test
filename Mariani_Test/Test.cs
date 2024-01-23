@@ -45,6 +45,7 @@ namespace Mariani_Test
 
         public override bool Equals(object obj)
         {
+            //se obj è uguale alla roba della lista
             return false;
         }
 
