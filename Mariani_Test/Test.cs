@@ -23,14 +23,14 @@ namespace Mariani_Test
             Lista = new List<IComponent>();
         }
 
-        public void Add(IComponent component)
+        public void Aggiunta(IComponent component)
         {
             Lista.Add(component);
         }
 
-        public void Remove(IComponent component)
+        public void Rimuovi(int index)
         {
-            Lista.Remove(component);
+            Lista.RemoveAt(index);
         }
 
         public IComponent GetChild(int index)
@@ -38,12 +38,12 @@ namespace Mariani_Test
             return Lista[index];
         }
 
-        public string ToString(IComponent component)
+        public override string ToString()
         {
             return ";";
         }
 
-        public bool Equals(IComponent component)
+        public override bool Equals(object obj)
         {
             return false;
         }
@@ -52,6 +52,5 @@ namespace Mariani_Test
         {
             return 0;
         }
-
     }
 }
