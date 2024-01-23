@@ -9,8 +9,16 @@ namespace Mariani_Test
 {
     public interface IComponent
     {
-        void Add(Component component);
+        void Aggiunta(IComponent component);
 
-        void Remove(Component component);
+        void Rimuovi(int index);
+
+        IComponent GetChild(int index);
+
+        bool Equals(object obj);
+
+        string ToString();
+
+        int Punteggio(IComponent component);
     }
 }

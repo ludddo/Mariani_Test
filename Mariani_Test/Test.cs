@@ -9,16 +9,48 @@ namespace Mariani_Test
 {
     internal class Test : IComponent
     {
-        protected List<Component> _children = new List<Component>();
+        private List<IComponent> _lista;
 
-        public void Add(Component component)
+        List<IComponent> Lista { get; set; }
+        
+        public Test() 
         {
-            this._children.Add(component);
+            Lista = new List<IComponent>();
         }
 
-        public void Remove(Component component)
+        public Test(List<IComponent> lista)
         {
-            this._children.Remove(component);
+            Lista = new List<IComponent>();
+        }
+
+        public void Add(IComponent component)
+        {
+            Lista.Add(component);
+        }
+
+        public void Remove(IComponent component)
+        {
+            Lista.Remove(component);
+        }
+
+        public IComponent GetChild(int index)
+        {
+            return Lista[index];
+        }
+
+        public string ToString(IComponent component)
+        {
+            return ";";
+        }
+
+        public bool Equals(IComponent component)
+        {
+            return false;
+        }
+
+        public int Punteggio(IComponent component)
+        {
+            return 0;
         }
 
     }
